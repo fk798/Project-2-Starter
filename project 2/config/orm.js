@@ -18,7 +18,7 @@ create: function(table,cols,vals,cb){
     queryString += cols.toString();
     queryString +=") ";
     queryString += "VALUES (";
-    queryString += eatIt(vals.length);
+    queryString += scanIt(vals.length);
     queryString +=") ";
 
     console.log(queryString);

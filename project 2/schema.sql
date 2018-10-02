@@ -1,17 +1,22 @@
 -- creating the databse
-CREATE DATABASE place_holder;
+CREATE DATABASE pulseScan;
 
 --use place_holder database
-USE place_holder;
+USE pulseScan;
 
 -- creating placeholder columns
-CREATE TABLE table_name (
-A INTEGER NOT NULL,
-B INTEGER NOT NULL,
-C INTEGER NOT NULL
+CREATE TABLE users (
+user_name VARCHAR(255) NOT NULL,
+user_password VARCHAR(255) NOT NULL,
+PRIMARY KEY (user_name)
 );
 
-
+CREATE TABLE user_scan (
+hasScan INTEGER NOT NULL,
+scan_time INTEGER NOT NULL,
+ID INTEGER NOT NULL
+PRIMARY KEY
+);
 
 
 
