@@ -1,32 +1,32 @@
-const int LED = D13;//just the pin its attached to
-const int BUTTON = D7;//pin where pushbutton is connected
-  int val = 0;          //variable to store value of input pin state 
-  int state = 0;        //0 is led off , 1 is on
-  int oldVal = 0;       //stores previous value of val, needed for debouncing
-//  int counter = 0; // to determine the size of data array
-  int readSize = 500;
-  int beatArray[500]; // max size of array, change this for longer heartbeat reads ..atleast 1min
-  int arrayCount = 0; // counter for a for loop
-  int brate = 9600;
+//const int LED = D13;//just the pin its attached to
+//const int BUTTON = D7;//pin where pushbutton is connected
+//  int val = 0;          //variable to store value of input pin state 
+//  int state = 0;        //0 is led off , 1 is on
+//  int oldVal = 0;       //stores previous value of val, needed for debouncing
+////  int counter = 0; // to determine the size of data array
+//  int readSize = 500;
+//  int beatArray[500]; // max size of array, change this for longer heartbeat reads ..atleast 1min
+//  int arrayCount = 0; // counter for a for loop
+//  int brate = 9600;
   
 
 //-----------for Wifi-------------------------
 
-//#include <ESP8266WiFi.h>
-// 
-//const char* ssid     = "GrnRodan";
-//const char* password = "AckUZg9z9v2$)s21";
-// 
-//const char* host = "wifitest.adafruit.com";
+#include <ESP8266WiFi.h>
+ 
+const char* ssid     = "Columbia University";
+const char* password = "";
+ 
+const char* host = "wifitest.adafruit.com";
 
 //------------------------------------------------------------------------------------------------------
 
 void setup() {
-  // put your setup code here, to run once
-  pinMode(LED, OUTPUT); //declares that led is output
-  pinMode(BUTTON, INPUT);  //and button is input
-  
-  Serial.begin(brate);//from sensor code
+//  // put your setup code here, to run once
+//  pinMode(LED, OUTPUT); //declares that led is output
+//  pinMode(BUTTON, INPUT);  //and button is input
+//  
+//  Serial.begin(brate);//from sensor code
 
   //-----------for Wifi----------------------------------------------------
 //  pinMode(0, OUTPUT);
